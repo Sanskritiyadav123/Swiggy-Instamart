@@ -1,0 +1,74 @@
+.main-container {
+    max-width: 480px; /* Equivalent to max-w-md */
+    width: 100%;
+    margin: 1rem auto; /* Equivalent to my-4 */
+    background-color: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Equivalent to shadow-xl */
+    border-radius: 1rem; /* Equivalent to rounded-2xl */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom styles for the toggle switch, as Tailwind doesn't have a direct class for it */
+.toggle-checkbox {
+    position: absolute;
+    display: block;
+    width: 1.5rem; /* Equivalent to w-6 */
+    height: 1.5rem; /* Equivalent to h-6 */
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    background-color: white;
+    border: 4px solid transparent;
+    appearance: none;
+    cursor: pointer;
+    transition: right 0.2s ease-in;
+}
+
+.toggle-checkbox:checked {
+    right: 0;
+    border-color: #f97316; /* Tailwind orange-500 */
+}
+
+.toggle-label {
+    display: block;
+    overflow: hidden;
+    height: 1.5rem; /* Equivalent to h-6 */
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    background-color: #d1d5db; /* Tailwind gray-300 */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #f97316; /* Tailwind orange-500 */
+}
+
+/* Back button styling */
+.back-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    color: #4b5563; /* Tailwind gray-600 */
+    transition: color 0.2s;
+    margin-bottom: 1rem;
+}
+
+.back-btn:hover {
+    color: #f97316; /* Tailwind orange-500 */
+}
+
+/* Add button styling */
+.add-btn {
+    background-color: #f97316; /* Tailwind orange-500 */
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px; /* Tailwind rounded-full */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.add-btn:hover {
+    background-color: #ea580c; /* Tailwind orange-600 */
+}
